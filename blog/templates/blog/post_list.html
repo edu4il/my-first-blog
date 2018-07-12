@@ -5,25 +5,15 @@
 	</head>
 
 	<body>
-
 		<div>
-			<h1><a href="">Park's blog</a></h1>
+			{% for post in posts %}
+				<h1><a href="">{{ post.title}}</a></h1>
+				<p>published: {{ post.published_date }}</p>
+				<p>{{ post.text |linebreaksbr }}</p>
+
+			{% endfor %}
 
 		</div>
-
-
-		<div>
-			<p>publised: 2018.7.11,22:13</p>
-			<h2><a href="">My First post</a></h2>
-			<p>HI There</p>
-		</div>
-
-		<div>
-			<p>publised: 2018.7.11 22:15</p>
-			<h2><a href="">My Second post</a></h2>
-			<p>It works!</p>
-		</div>
-
 	</body>
 </html>
 
